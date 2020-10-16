@@ -1,0 +1,35 @@
+<div class="container m-2p-2 ">
+  <div class="row">
+    <div class= "col-sm-3 sidebar ">
+    <!-- Sidebar -->
+      <div class="sidebar-heading list-group-item list-group-item-action bg-light"><b>{{sidebarTitle}}</b></div>
+        <div class="list-group list-group-flush">
+          <a *ngFor="let menusingle of navigationArray" href="{{menusingle.menulink}}"
+              class="list-group-item list-group-item-action bg-light">{{menusingle.menuname}}</a>
+              
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->  
+        
+    <div class="col-sm-9 ">
+    <!-- Page Content -->
+    <div class="adjust" id="page-content-wrapper">
+        <div class="container-fluid">
+        <h1 class="mt-1">{{mainpartTitle}}</h1>
+        </div>
+            <div class="card-deck card-group">
+              <div *ngFor="let imgs of imagesArray" class="card">
+                <img  src="{{imgs.imageURL}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{imgs.cardname}}</h5>
+                  </div>
+              </div>
+            </div>
+    </div>
+    </div>
+  </div>
+</div>
+     <!-- /#page-content-wrapper -->
+        
+          
+
